@@ -24,6 +24,7 @@
 				var oJSON = JSON.parse(sResponseBody);
 				var sReais = oJSON.rates.BRL;
 				console.log(sReais);
+				document.querySelector("#valor_destino").value = sReais;
 			}
 			
 			function chamaAPI(){
@@ -47,7 +48,7 @@
 		<input type="text" value="BRL" disabled>
 		<br />
 		<label>Valor de destino</label>
-		<input type="number" disabled="true">	
+		<input id="valor_destino" type="number" disabled="true">	
 		
 		<br/>
 		<button type="button" onclick="voltar()">
